@@ -67,4 +67,13 @@ class WebController extends Controller
             'categories' => $categories
         ]);
     }
+
+    public function contact() {
+
+        $categories = Categories::all();
+        return view('contact', [
+            'title' => 'Contact',
+            'categories' => $categories
+        ]);
+    }
 }

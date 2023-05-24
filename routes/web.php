@@ -19,7 +19,4 @@ Route::get('/publisher', [WebController::class, 'publisher']);
 Route::get('/detail/{books_id}', [WebController::class, 'detail']);
 Route::get('/category/{categories:category}', [WebController::class, 'filterCategory']);
 Route::get('/publisher/detail/{publisher_id}', [WebController::class, 'publisherDetail']);
-
-Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact']);
-});
+Route::get('/contact', [WebController::class, 'contact']);
