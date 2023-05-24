@@ -1,7 +1,7 @@
 @extends('index')
 @section('contents')
 <div class="row align-self-center" style="width: 100%">
-    @if (count($books) == 0)
+    @if (count($publishers) == 0)
 
     <div class="col-12">
         <div class="card">
