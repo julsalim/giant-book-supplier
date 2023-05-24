@@ -1,6 +1,19 @@
 @extends('index')
 @section('contents')
 <div class="row  align-self-center" style="width: 100%">
+    @if (count($books) == 0)
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">No books found</h5>
+                <p class="card-text">There are no books with this category</p>
+            </div>
+        </div>
+
+    </div>
+
+    @else
     @foreach($books as $book) 
     <div class="col-3" style="padding-right: 4px; padding-left:4px">
         <div class="card">
@@ -21,9 +34,8 @@
         
       </div>    
     @endforeach
+    @endif
     
-    {{-- @for ($i = 0; $i < count({{ $books }}); $i++)
     
-    @endfor --}}
 </div>
 @endsection

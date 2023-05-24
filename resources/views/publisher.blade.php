@@ -1,6 +1,19 @@
 @extends('index')
 @section('contents')
 <div class="row align-self-center" style="width: 100%">
+    @if (count($books) == 0)
+
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">No publisher found</h5>
+                <p class="card-text">There are no publisher.</p>
+            </div>
+        </div>
+
+    </div>
+
+    @else
     @foreach($publishers as $publisher)
     <div class="col-3" style="padding-right: 4px; padding-left:4px">
         <div class="card">
@@ -21,5 +34,6 @@
         
       </div>    
     @endforeach
+    @endif
 </div>
 @endsection
